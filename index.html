@@ -9,16 +9,20 @@
   <script>
   function sum100(num) {
     if (num == 100) {
-      console.log("perfect!")
+      alert("perfect!");
     }
     else if (num < 100) {
-      console.log(100-num + "under")
+      alert(100-num + "under");
     }
     else {
-      console.log(num-100 + "over")
+      alert(num-100 + "over");
     }
   }
-    console.log("wut")
+
+  let num = prompt("Enter a positive numer: ");
+  sum100(num);
+
+
   </script>
 </body>
 </html>
