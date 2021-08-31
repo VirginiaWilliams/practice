@@ -1,5 +1,9 @@
-function helloworld() {
-  console.log("Hello World!");
+let randnum = Math.floor(Math.random()) + 1;
+
+const playSubmit = document.querySelector(".submit");
+
+function hello() {
+  console.log("hello");
 }
 
-helloworld();
+playSubmit.addEventListener("click", hello);
