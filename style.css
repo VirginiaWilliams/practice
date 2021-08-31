@@ -1,5 +1,10 @@
+body {
+  font-family: courier, serif;
+}
+
 .inner-box {
   border: grey;
   border-radius: 10px;
   background-color: lightgrey;
+  padding: 100px;
 }
