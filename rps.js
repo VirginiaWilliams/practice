@@ -17,4 +17,4 @@ function computerPlay() {
 
 
 
-playSubmit.addEventListener("click", computerPlay());
+playSubmit.addEventListener("click", computerPlay;
