@@ -17,13 +17,14 @@ const finalResults = document.querySelector(".finalResults");
 
 // generates random value for the computers turn
 function computerPlay() {
-  let randnum = Math.floor(Math.random()) + 1;
-  alert(randnum%3);
+  let randnum = Math.floor(Math.random()) * 3;
   return randnum % 3;
 }
 
 // calculates results and changes html accordingly
-
+function displayResults(num) {
+  let randnum = computerPlay();
+}
 
 
 playSubmit.addEventListener("click", computerPlay);
