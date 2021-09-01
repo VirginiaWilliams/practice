@@ -8,13 +8,22 @@
 // let randnum = Math.floor(Math.random()) + 1;
 
 const playSubmit = document.querySelector(".submit");
+const computerResults = document.querySelector(".computerResults");
+const finalResults = document.querySelector(".finalResults");
 
+/**************************************************/
+// Functions:
+/**************************************************/
+
+// generates random value for the computers turn
 function computerPlay() {
   let randnum = Math.floor(Math.random()) + 1;
   alert(randnum%3);
   return randnum % 3;
 }
 
+// calculates results and changes html accordingly
 
 
-playSubmit.addEventListener("click", computerPlay;
+
+playSubmit.addEventListener("click", computerPlay);
