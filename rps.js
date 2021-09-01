@@ -9,12 +9,12 @@
 
 const playSubmit = document.querySelector(".submit");
 
-function computerPlay(num) {
+function computerPlay() {
   let randnum = Math.floor(Math.random()) + 1;
-  alert(num%3);
-  return num % 3;
+  alert(randnum%3);
+  return randnum % 3;
 }
 
 
 
-playSubmit.addEventListener("click", computerPlay(randnum));
+playSubmit.addEventListener("click", computerPlay());
