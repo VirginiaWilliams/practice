@@ -26,19 +26,19 @@ function displayResults(num) {
   let computerNum = computerPlay();
   if (computerNum == 1) {
     //Rock
-    computerResults.textContent = "Rock";
+    computerResults.innerHTML = "Rock";
   }
   else if (computerNum == 2) {
     //Paper
-    computerResults.textContent = "Paper";
+    computerResults.innerHTML = "Paper";
   }
   else if (computerNum == 3){
     //Scissors
-    computerResults.textContent = "Scissors";
+    computerResults.innerHTML = "Scissors";
   }
   else {
     //Unexpected
-    computerResults.textContent = "...";
+    computerResults.innerHTML = "...";
   }
 }
 
