@@ -14,6 +14,6 @@ function computerPlay(num) {
   return num % 3;
 }
 
-function
 
-playSubmit.addEventListener("click", computerPlay);
+
+playSubmit.addEventListener("click", computerPlay(3));
