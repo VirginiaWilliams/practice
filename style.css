@@ -6,8 +6,8 @@ header {
 
 body {
   font-family: courier, serif;
-  /* background: RGB(162, 216, 250); */
-  background: RGB(252, 246, 207);
+  background: RGB(162, 216, 250);
+  /* background: RGB(252, 246, 207); */
 }
 
 .inner-box {

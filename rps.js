@@ -5,11 +5,12 @@
 // all javascript for Rock, Paper, Scissors
 /**************************************************/
 
-let randnum = Math.floor(Math.random()) + 1;
+// let randnum = Math.floor(Math.random()) + 1;
 
 const playSubmit = document.querySelector(".submit");
 
 function computerPlay(num) {
+  let randnum = Math.floor(Math.random()) + 1;
   alert(num%3);
   return num % 3;
 }
