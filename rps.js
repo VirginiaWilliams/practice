@@ -1,12 +1,19 @@
+/**************************************************/
+// 08/31/2021
+// Virginia Williams
+//
+// all javascript for Rock, Paper, Scissors
+/**************************************************/
+
 let randnum = Math.floor(Math.random()) + 1;
 
 const playSubmit = document.querySelector(".submit");
 
-function hello() {
-  // console.log("hello");
-  alert("hello");
+function computerPlay(num) {
+  console.log(num%3);
+  return num % 3;
 }
 
-playSubmit.addEventListener("click", hello);
-// alert("hello");
-// console.log("hello");
+function
+
+playSubmit.addEventListener("click", computerPlay);
