@@ -17,7 +17,7 @@ const finalResults = document.querySelector(".finalResults");
 
 // generates random value for the computers turn
 function computerPlay() {
-  let randnum = Math.floor(Math.random()) * 3;
+  let randnum = Math.floor(Math.random()*3)3;
   return randnum + 1;
 }
 
