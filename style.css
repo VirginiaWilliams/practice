@@ -21,5 +21,8 @@ body {
 }
 
 .submit {
-  background: RGB(194, 230, 252); /*lighter sky blue */
+  /* background: RGB(194, 230, 252); lighter sky blue */
+  background: RGB(222, 242, 255); /* very light sky blue*/
+  border-radius: 5px;
+  font-family: courier, serif;
 }
