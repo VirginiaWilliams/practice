@@ -18,13 +18,29 @@ const finalResults = document.querySelector(".finalResults");
 // generates random value for the computers turn
 function computerPlay() {
   let randnum = Math.floor(Math.random()) * 3;
-  return randnum % 3;
+  return randnum + 1;
 }
 
 // calculates results and changes html accordingly
 function displayResults(num) {
-  let randnum = computerPlay();
+  let computerNum = computerPlay();
+  if (computerNum == 1) {
+    //Rock
+    computerResults.textContent = "Rock";
+  }
+  else if (computerNum == 2) {
+    //Paper
+    computerResults.textContent = "Paper";
+  }
+  else if (computerNum == 3){
+    //Scissors
+    computerResults.textContent = "Scissors";
+  }
+  else {
+    //Unexpected
+    computerResults.textContent = "...";
+  }
 }
 
 
-playSubmit.addEventListener("click", computerPlay);
+playSubmit.addEventListener("click", function(){displayResults(2)});
