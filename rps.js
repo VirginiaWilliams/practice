@@ -16,4 +16,4 @@ function computerPlay(num) {
 
 
 
-playSubmit.addEventListener("click", computerPlay(3));
+playSubmit.addEventListener("click", computerPlay(randnum));
