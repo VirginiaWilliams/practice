@@ -26,3 +26,8 @@ body {
   border-radius: 5px;
   font-family: courier, serif;
 }
+
+.cat-pic {
+  height: 200px;
+  width: auto;
+}
