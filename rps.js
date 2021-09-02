@@ -27,18 +27,46 @@ function displayResults(num) {
   if (computerNum == 1) {
     //Rock
     computerResults.innerHTML = "Rock";
+    if (num == 1) {
+      finalResults.innerHTML = "It's a tie!";
+    }
+    else if (num == 2) {
+      finalResults.innerHTML = "You win!";
+    }
+    else {
+      finalResults.innerHTML = "I win!";
+    }
   }
   else if (computerNum == 2) {
     //Paper
     computerResults.innerHTML = "Paper";
+    if (num == 1) {
+      finalResults.innerHTML = "I win!";
+    }
+    else if (num == 2) {
+      finalResults.innerHTML = "It's a tie!";
+    }
+    else {
+      finalResults.innerHTML = "You win!";
+    }
   }
   else if (computerNum == 3){
     //Scissors
     computerResults.innerHTML = "Scissors";
+    if (num == 1) {
+      finalResults.innerHTML = "You win!";
+    }
+    else if (num == 2) {
+      finalResults.innerHTML = "I win!";
+    }
+    else {
+      finalResults.innerHTML = "It's a tie!";
+    }
   }
   else {
     //Unexpected
     computerResults.innerHTML = "...";
+    finalResults.innerHTML = "Hmmmmm something went wrong :(";
   }
 }
 
