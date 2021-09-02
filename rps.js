@@ -77,6 +77,9 @@ if (document.getElementById('rock').checked) {
 else if (document.getElementById('paper').checked) {
   playSubmit.addEventListener("click", function(){displayResults(2)});
 }
-else {
+else if (document.getElementById('scissors').checked){
   playSubmit.addEventListener("click", function(){displayResults(3)});
+}
+else {
+  playSubmit.addEventListener("click", function(){displayResults(4)});
 }
