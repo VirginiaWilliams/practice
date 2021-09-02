@@ -71,15 +71,25 @@ function displayResults(num) {
   }
 }
 
-if (document.querySelector('rock').checked) {
-  playSubmit.addEventListener("click", function(){displayResults(1)});
+function onClick() {
+  var elements = document.getElementByName("rps");
+  for (i = 0; i < elements.length; i++) {
+    if (elements[i].checked) {
+      playSubmit.addEventListener("click", function(){displayResults(i+1)});
+    }
+  }
 }
-else if (document.getElementById('paper').checked) {
-  playSubmit.addEventListener("click", function(){displayResults(2)});
-}
-else if (document.getElementById('scissors').checked){
-  playSubmit.addEventListener("click", function(){displayResults(3)});
-}
-else {
-  playSubmit.addEventListener("click", function(){displayResults(4)});
-}
+
+
+// if (document.querySelector('rock').checked) {
+//   playSubmit.addEventListener("click", function(){displayResults(1)});
+// }
+// else if (document.getElementById('paper').checked) {
+//   playSubmit.addEventListener("click", function(){displayResults(2)});
+// }
+// else if (document.getElementById('scissors').checked){
+//   playSubmit.addEventListener("click", function(){displayResults(3)});
+// }
+// else {
+//   playSubmit.addEventListener("click", function(){displayResults(4)});
+// }
