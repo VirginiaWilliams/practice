@@ -71,7 +71,7 @@ function displayResults(num) {
   }
 }
 
-if (document.getElementById('rock').checked) {
+if (document.querySelector('rock').checked) {
   playSubmit.addEventListener("click", function(){displayResults(1)});
 }
 else if (document.getElementById('paper').checked) {
