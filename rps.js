@@ -72,7 +72,7 @@ function displayResults(num) {
 }
 
 function onClick() {
-  var elements = document.getElementByName("rps");
+  var elements = document.getElementsByName("rps");
   for (i = 0; i < elements.length; i++) {
     if (elements[i].checked) {
       playSubmit.addEventListener("click", function(){displayResults(i+1)});
