@@ -24,6 +24,7 @@ function computerPlay() {
 // calculates results and changes html accordingly
 function displayResults(num) {
   let computerNum = computerPlay();
+  alert("comp: " + computerNum + ". user: " + num);
   if (computerNum == 1) {
     //Rock
     computerResults.innerHTML = "Rock";
