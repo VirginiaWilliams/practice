@@ -10,7 +10,7 @@ body {
   /* background: RGB(252, 246, 207); */
 }
 
-.inner-box {
+.outer-box {
   border-radius: 10px;
   background-color: white;
   padding: 20px;
