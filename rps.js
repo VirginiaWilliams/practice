@@ -5,12 +5,10 @@
 // all javascript for Rock, Paper, Scissors
 /**************************************************/
 
-// let randnum = Math.floor(Math.random()) + 1;
-
 const playSubmit = document.querySelector(".submit");
 const computerResults = document.querySelector(".computerResults");
 const finalResults = document.querySelector(".finalResults");
-// const userField = document.querySelector("userField");
+const userField = document.querySelector(".userField");
 
 /**************************************************/
 // Functions:
@@ -34,83 +32,13 @@ function computerPlay() {
 }
 
 // calculates results and changes html accordingly
-function calcResults() {
+function checkResults() {
+  // Calculate user turn
+  let userTurn = userField.value;
   // Calculate computer turn
-  let comPlay = computerPlay();
-  computerResults.innerHTML = computerPlay;
-  // Get user turn
-  let userPlay = document.getElementById("userField").value;
-  alert("comp: " + computerPlay + ". user: " + userResults);
-  if (comPlay == "Rock") {
-    //Rock
-    // computerResults.innerHTML = "Rock";
-    if (userPlay == "Rock") {
-      finalResults.innerHTML = "It's a tie!";
-    }
-    else if (userPlay == "Paper") {
-      finalResults.innerHTML = "You win!";
-    }
-    else {
-      finalResults.innerHTML = "I win!";
-    }
-  }
-  else if (comPlay == "Paper") {
-    //Paper
-    // computerResults.innerHTML = "Paper";
-    if (userPlay == "Rock") {
-      finalResults.innerHTML = "I win!";
-    }
-    else if (userPlay == "Paper") {
-      finalResults.innerHTML = "It's a tie!";
-    }
-    else {
-      finalResults.innerHTML = "You win!";
-    }
-  }
-  else if (comPlay == "Scissors"){
-    //Scissors
-    // computerResults.innerHTML = "Scissors";
-    if (userPlay == "Rock") {
-      finalResults.innerHTML = "You win!";
-    }
-    else if (userPlay == "Paper") {
-      finalResults.innerHTML = "I win!";
-    }
-    else {
-      finalResults.innerHTML = "It's a tie!";
-    }
-  }
-  else {
-    //Unexpected
-    computerResults.innerHTML = "...";
-    finalResults.innerHTML = "Hmmmmm something went wrong :(";
-  }
+  let computerTurn = computerPlay();
+
+  computerResults.textContent = computerTurn;
+  finalResults.textContent = userTurn;
+
 }
-
-// you need to just change it to input dude
-// playSubmit.addEventListener("click", calcResults);
-
-
-
-// function onClick() {
-//   var elements = document.getElementsByName("rps");
-//   for (i = 0; i < elements.length; i++) {
-//     if (elements[i].checked) {
-//       playSubmit.addEventListener("click", function(){displayResults(i+1)});
-//     }
-//   }
-// }
-
-
-// if (document.querySelector('rock').checked) {
-//   playSubmit.addEventListener("click", function(){displayResults(1)});
-// }
-// else if (document.getElementById('paper').checked) {
-//   playSubmit.addEventListener("click", function(){displayResults(2)});
-// }
-// else if (document.getElementById('scissors').checked){
-//   playSubmit.addEventListener("click", function(){displayResults(3)});
-// }
-// else {
-//   playSubmit.addEventListener("click", function(){displayResults(4)});
-// }
