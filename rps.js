@@ -36,43 +36,44 @@ function computerPlay() {
 // calculates results and changes html accordingly
 function calcResults() {
   // Calculate computer turn
-  computerResults.innerHTML = computerPlay();
+  let computerPlay = computerPlay()
+  computerResults.innerHTML = computerPlay;
   // Get user turn
-  let userResults = document.getElementById(userField).value;
+  let userPlay = document.getElementById("userField").value;
   alert("comp: " + computerPlay + ". user: " + userResults);
-  if (computerResults == "Rock") {
+  if (computerPlay == "Rock") {
     //Rock
     // computerResults.innerHTML = "Rock";
-    if (userResults == "Rock") {
+    if (userPlay == "Rock") {
       finalResults.innerHTML = "It's a tie!";
     }
-    else if (userResults == "Paper") {
+    else if (userPlay == "Paper") {
       finalResults.innerHTML = "You win!";
     }
     else {
       finalResults.innerHTML = "I win!";
     }
   }
-  else if (computerResults == "Paper") {
+  else if (computerPlay == "Paper") {
     //Paper
     // computerResults.innerHTML = "Paper";
-    if (userResults == "Rock") {
+    if (userPlay == "Rock") {
       finalResults.innerHTML = "I win!";
     }
-    else if (userResults == "Paper") {
+    else if (userPlay == "Paper") {
       finalResults.innerHTML = "It's a tie!";
     }
     else {
       finalResults.innerHTML = "You win!";
     }
   }
-  else if (computerResults == "Scissors"){
+  else if (computerPlay == "Scissors"){
     //Scissors
     // computerResults.innerHTML = "Scissors";
-    if (userResults == "Rock") {
+    if (userPlay == "Rock") {
       finalResults.innerHTML = "You win!";
     }
-    else if (userResults == "Paper") {
+    else if (userPlay == "Paper") {
       finalResults.innerHTML = "I win!";
     }
     else {
@@ -87,7 +88,7 @@ function calcResults() {
 }
 
 // you need to just change it to input dude
-playSubmit.addEventListener("click", calcResults);
+// playSubmit.addEventListener("click", calcResults);
 
 
 
