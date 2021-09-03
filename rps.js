@@ -36,12 +36,12 @@ function computerPlay() {
 // calculates results and changes html accordingly
 function calcResults() {
   // Calculate computer turn
-  let computerPlay = computerPlay();
+  let comPlay = computerPlay();
   computerResults.innerHTML = computerPlay;
   // Get user turn
   let userPlay = document.getElementById("userField").value;
   alert("comp: " + computerPlay + ". user: " + userResults);
-  if (computerPlay == "Rock") {
+  if (comPlay == "Rock") {
     //Rock
     // computerResults.innerHTML = "Rock";
     if (userPlay == "Rock") {
@@ -54,7 +54,7 @@ function calcResults() {
       finalResults.innerHTML = "I win!";
     }
   }
-  else if (computerPlay == "Paper") {
+  else if (comPlay == "Paper") {
     //Paper
     // computerResults.innerHTML = "Paper";
     if (userPlay == "Rock") {
@@ -67,7 +67,7 @@ function calcResults() {
       finalResults.innerHTML = "You win!";
     }
   }
-  else if (computerPlay == "Scissors"){
+  else if (comPlay == "Scissors"){
     //Scissors
     // computerResults.innerHTML = "Scissors";
     if (userPlay == "Rock") {
