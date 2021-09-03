@@ -36,7 +36,7 @@ function computerPlay() {
 // calculates results and changes html accordingly
 function calcResults() {
   // Calculate computer turn
-  let computerPlay = computerPlay()
+  let computerPlay = computerPlay();
   computerResults.innerHTML = computerPlay;
   // Get user turn
   let userPlay = document.getElementById("userField").value;
