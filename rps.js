@@ -18,13 +18,13 @@ const userField = document.querySelector(".userField");
 function computerPlay() {
   let randnum = Math.floor(Math.random()*3);
   if (randnum + 1 == 1) {
-    return "Rock";
+    return "rock";
   }
   else if (randnum + 1 == 2) {
-    return "Paper";
+    return "paper";
   }
   else if (randnum + 1 == 3) {
-    return "Scissors";
+    return "scissors";
   }
   else {
     return "error";
@@ -37,12 +37,43 @@ function checkResults() {
   let userTurn = userField.value;
   // Calculate computer turn
   let computerTurn = computerPlay();
+  computerResults.textContent = computerTurn;
 
   //check user input
   userTurn = userTurn.toLowerCase();
-  if (userTurn == "rock" || userTurn == "paper" || userTurn == "scissors") {
-    computerResults.textContent = computerTurn;
-    finalResults.textContent = userTurn;
+
+  if (userTurn == "rock") {
+    if (computerTurn == "rock") {
+      finalResults.textContent = "It's a tie!";
+    }
+    else if (computerTurn == "paper") {
+      finalResults.textContent = "I win!";
+    }
+    else {
+      finalResults.textContent = "You win!";
+    }
+  }
+  else if (userTurn == "paper") {
+    if (computerTurn == "rock") {
+      finalResults.textContent = "You win!";
+    }
+    else if (computerTurn == "paper") {
+      finalResults.textContent = "It's a tie!";
+    }
+    else {
+      finalResults.textContent = "I win!";
+    }
+  }
+  else if (userTurn == "scissors") {
+    if (computerTurn == "rock") {
+      finalResults.textContent = "I win!";
+    }
+    else if (computerTurn == "paper") {
+      finalResults.textContent = "You win!";
+    }
+    else {
+      finalResults.textContent = "It's a tie!";
+    }
   }
   else {
     finalResults.textContent = "Uh oh! Looks like you didn't put in a valid choice... try again!";
