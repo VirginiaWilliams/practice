@@ -42,6 +42,7 @@ function checkResults() {
   userTurn = userTurn.toLowerCase;
   if (userTurn != "rock" || userTurn != "paper" || userTurn != "scissors") {
     finalResults.textContent = "Uh oh! Looks like you didn't put in a valid choice... try again!";
+    computerResults.textContent = userTurn;
   }
   else {
     computerResults.textContent = computerTurn;
