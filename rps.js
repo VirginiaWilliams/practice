@@ -10,7 +10,7 @@
 const playSubmit = document.querySelector(".submit");
 const computerResults = document.querySelector(".computerResults");
 const finalResults = document.querySelector(".finalResults");
-const userField = document.querySelector("userField");
+// const userField = document.querySelector("userField");
 
 /**************************************************/
 // Functions:
@@ -38,8 +38,8 @@ function calcResults() {
   // Calculate computer turn
   computerResults.innerHTML = computerPlay();
   // Get user turn
-  let userResults = userField.value;
-  // alert("comp: " + computerPlay + ". user: ");
+  let userResults = document.getElementById(userField).value;
+  alert("comp: " + computerPlay + ". user: " + userResults);
   if (computerResults == "Rock") {
     //Rock
     // computerResults.innerHTML = "Rock";
