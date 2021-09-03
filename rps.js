@@ -10,6 +10,7 @@
 const playSubmit = document.querySelector(".submit");
 const computerResults = document.querySelector(".computerResults");
 const finalResults = document.querySelector(".finalResults");
+const userField = document.querySelector("userField");
 
 /**************************************************/
 // Functions:
@@ -18,46 +19,60 @@ const finalResults = document.querySelector(".finalResults");
 // generates random value for the computers turn
 function computerPlay() {
   let randnum = Math.floor(Math.random()*3);
-  return randnum + 1;
+  if (randnum + 1 == 1) {
+    return "Rock";
+  }
+  else if (randnum + 1 == 2) {
+    return "Paper";
+  }
+  else if (randnum + 1 == 3) {
+    return "Scissors";
+  }
+  else {
+    return "error";
+  }
 }
 
 // calculates results and changes html accordingly
-function displayResults(num) {
-  let computerNum = computerPlay();
-  alert("comp: " + computerNum + ". user: " + num);
-  if (computerNum == 1) {
+function calcResults() {
+  // Calculate computer turn
+  computerResults.innerHTML = computerPlay();
+  // Get user turn
+  let userResults = userField.value;
+  // alert("comp: " + computerPlay + ". user: ");
+  if (computerResults == "Rock") {
     //Rock
-    computerResults.innerHTML = "Rock";
-    if (num == 1) {
+    // computerResults.innerHTML = "Rock";
+    if (userResults == "Rock") {
       finalResults.innerHTML = "It's a tie!";
     }
-    else if (num == 2) {
+    else if (userResults == "Paper") {
       finalResults.innerHTML = "You win!";
     }
     else {
       finalResults.innerHTML = "I win!";
     }
   }
-  else if (computerNum == 2) {
+  else if (computerResults == "Paper") {
     //Paper
-    computerResults.innerHTML = "Paper";
-    if (num == 1) {
+    // computerResults.innerHTML = "Paper";
+    if (userResults == "Rock") {
       finalResults.innerHTML = "I win!";
     }
-    else if (num == 2) {
+    else if (userResults == "Paper") {
       finalResults.innerHTML = "It's a tie!";
     }
     else {
       finalResults.innerHTML = "You win!";
     }
   }
-  else if (computerNum == 3){
+  else if (computerResults == "Scissors"){
     //Scissors
-    computerResults.innerHTML = "Scissors";
-    if (num == 1) {
+    // computerResults.innerHTML = "Scissors";
+    if (userResults == "Rock") {
       finalResults.innerHTML = "You win!";
     }
-    else if (num == 2) {
+    else if (userResults == "Paper") {
       finalResults.innerHTML = "I win!";
     }
     else {
@@ -71,14 +86,19 @@ function displayResults(num) {
   }
 }
 
-function onClick() {
-  var elements = document.getElementsByName("rps");
-  for (i = 0; i < elements.length; i++) {
-    if (elements[i].checked) {
-      playSubmit.addEventListener("click", function(){displayResults(i+1)});
-    }
-  }
-}
+// you need to just change it to input dude
+playSubmit.addEventListener("click", calcResults);
+
+
+
+// function onClick() {
+//   var elements = document.getElementsByName("rps");
+//   for (i = 0; i < elements.length; i++) {
+//     if (elements[i].checked) {
+//       playSubmit.addEventListener("click", function(){displayResults(i+1)});
+//     }
+//   }
+// }
 
 
 // if (document.querySelector('rock').checked) {
