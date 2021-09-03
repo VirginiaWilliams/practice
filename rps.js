@@ -40,13 +40,13 @@ function checkResults() {
 
   //check user input
   userTurn = userTurn.toLowerCase();
-  if (userTurn != "rock" || userTurn != "paper" || userTurn != "scissors") {
-    finalResults.textContent = "Uh oh! Looks like you didn't put in a valid choice... try again!";
-    computerResults.textContent = userTurn;
-  }
-  else {
+  if (userTurn == "rock" || userTurn == "paper" || userTurn == "scissors") {
     computerResults.textContent = computerTurn;
     finalResults.textContent = userTurn;
+  }
+  else {
+    finalResults.textContent = "Uh oh! Looks like you didn't put in a valid choice... try again!";
+    computerResults.textContent = userTurn;
   }
 
 
