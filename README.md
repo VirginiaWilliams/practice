@@ -6,6 +6,7 @@ As of right now the site contains:
 - Cat picture page
 
 To do:
-- Add little games to homne Page
+- Add more games to homne Page
+    - Music thing?
 - Make logos/style things
 - Try linking to other things with js
