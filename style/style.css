@@ -63,13 +63,20 @@ body {
   border-style: solid;
   border-color: darkgrey;
   border-width: thin;
+  position: relative;
 /*   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .string {
   background-color: black;
-  height: 100px;
+  height: 200px;
   width: 5px;
+  position: absolute;
+  left: 50%;
+}
+
+.string:hover {
+  background-color: red;
 }
 
 #outer-cat-box {
